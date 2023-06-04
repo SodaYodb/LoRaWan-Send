@@ -6,6 +6,6 @@
 
 ## Hardware Requirements
 
-- ESP32 e.q (CubeCell – Dev-Board (V2)
+- ESP32 with LoRa e.q (CubeCell – Dev-Board (V2)
 - DHT sensor (DHT22)
 
