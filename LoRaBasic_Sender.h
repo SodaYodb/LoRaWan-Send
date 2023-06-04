@@ -42,7 +42,7 @@ void loop(){
 
 void Send_Data(float hum, float temp) {
   // convert humidity and temperature to integers without decimal point
-  // keep in mind that the Temp or hum could be greater than 99.9
+  // keep in mind that the temperature or humidity could be greater than 99.9
   int hum_int = (int)(hum * 10);
   int temp_int = (int)(temp * 10);
   // create a buffer to hold the data as a string
