@@ -42,11 +42,12 @@ void loop(){
 
 void Send_Data(float hum, float temp) {
   // convert humidity and temperature to integers without decimal point
-  int hum_int = (int)(hum * 1000);
-  int temp_int = (int)(temp * 1000);
+  // keep in mind that the Temp or hum could be greater than 99.9
+  int hum_int = (int)(hum * 10);
+  int temp_int = (int)(temp * 10);
   // create a buffer to hold the data as a string
   char data[20];
-  int data_length = sprintf(data, "%d,%d", hum_int, temp_int);
+  int data_length = sprintf(data, "%d,%d", temp_int, hum_int);
   
   LoRaWAN.join(devEui, appEui, appKey);
   if (LoRaWAN.joined()) {
