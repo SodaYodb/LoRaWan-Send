@@ -46,6 +46,7 @@ void Send_Data(float hum, float temp) {
   int hum_int = (int)(hum * 10);
   int temp_int = (int)(temp * 10);
   // create a buffer to hold the data as a string
+  // be aware of this 20 byte buffer size, maybe check the lenght of data you want provide or make buffer dynamic or just do both
   char data[20];
   int data_length = sprintf(data, "%d,%d", temp_int, hum_int);
   
